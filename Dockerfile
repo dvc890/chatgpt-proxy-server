@@ -28,4 +28,6 @@ RUN echo "Server = ${MIRROR_URL}" > /etc/pacman.d/mirrorlist \
     && rm -rf /usr/lib/python* \
     && echo -e "y\nY" | pacman -Scc
 
+EXPOSE 9515
+
 CMD ["./undetected_chromedriver", "--allowed-ips=", "--allowed-origins=*"]
